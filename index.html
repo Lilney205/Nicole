@@ -7,12 +7,19 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Love Music -->
+  <!-- Background Love Music -->
   <audio autoplay loop hidden>
     <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mp3">
     Your browser does not support the audio element.
   </audio>
 
+  <!-- Nicole's Picture -->
+  <div class="photo-frame">
+    <img src="https://raw.githubusercontent.com/Lilney205/Nicole/main/Screenshot_20250722-145836.png" alt="Nicole" />
+    <p class="photo-caption">My One & Only – Nicole 🌹</p>
+  </div>
+
+  <!-- Main Content -->
   <div class="container">
     <div class="heart">❤️</div>
     <h1>To My Dearest Nicole</h1>
@@ -22,14 +29,33 @@
       This page is just a small piece of what you mean to me. 💕<br />
       Every heartbeat whispers your name, Nicole. 💐
     </p>
-    <p>
-      No distance, no time, no storm will ever change how deeply I care for you.<br />
-      You are cherished, you are adored, you are forever mine. 🌹
-    </p>
+
+    <!-- Quote Slider -->
+    <div class="quotes">
+      <span id="quote-text">“I love you not only for what you are, but for what I am when I am with you.”</span>
+    </div>
+
     <div class="heart">🌹</div>
   </div>
+
   <div class="footer">
     &copy; 2025 Lilney Rooney – All love reserved ❤️
   </div>
+
+  <!-- JavaScript for Quote Rotation -->
+  <script>
+    const quotes = [
+      "“I love you not only for what you are, but for what I am when I am with you.”",
+      "“Every moment with you is a treasure I never want to lose.”",
+      "“You are my today and all of my tomorrows.”",
+      "“In you, I’ve found the love of my life and my closest friend.”",
+      "“With you, I am home.”"
+    ];
+    let i = 0;
+    setInterval(() => {
+      document.getElementById("quote-text").innerText = quotes[i];
+      i = (i + 1) % quotes.length;
+    }, 4000);
+  </script>
 </body>
-                          </html>
+</html>
